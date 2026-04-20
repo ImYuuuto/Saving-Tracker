@@ -159,9 +159,7 @@ exportBtn.addEventListener("click", () => {
 });
 
 fileInput.addEventListener("change", (e) => {
-  
   const file = e.target.files[0];
-  console.log(file)
   if (!file) return;
 
   const loader = new JsonFiles();
@@ -173,7 +171,7 @@ fileInput.addEventListener("change", (e) => {
 
     if (data.monthlySavings) {
       data.monthlySavings.forEach((moneyGoal, i) => {
-        monthlySavings[i].amount = moneyGoal.amout;
+        monthlySavings[i].amount = moneyGoal.amount;
       });
     }
     renderPage();
